@@ -1,11 +1,6 @@
 package page_Object;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
-import test_scripts.DriverWrapper;
-
-import java.util.Date;
 
 public class LandingPage extends BasePage {
     //Locators
@@ -18,6 +13,12 @@ public class LandingPage extends BasePage {
     private By redWarningButton = By.xpath("//div[@id='u_0_q']//i[@class='_5dbc img sp_nK4QBEPgZVv_2x sx_48bc47']");
     private By month = By.id("month");
     private By selectCurrentMont = By.id("month");
+    private By searchProduct = By.id("twotabsearchtextbox");
+    private By searchButton = By.xpath("//div[@class='nav-search-submit nav-sprite']//input[@class='nav-input']");
+    private By price = By.className("a-row");
+   // private By amazonDate = By.xpath("//div[@class='rush-component']//div[@class='rush-component']//div[@class='s-include-content-margin s-border-bottom']//div[@class='a-section a-spacing-medium']//div[@class='sg-row']//div[@class='sg-col-4-of-12 sg-col-8-of-16 sg-col-16-of-24 sg-col-12-of-20 sg-col-24-of-32 sg-col sg-col-28-of-36 sg-col-20-of-28']//div[@class='sg-col-inner']//div[@class='sg-row']//div[@class='sg-col-4-of-24 sg-col-4-of-12 sg-col-4-of-36 sg-col-4-of-28 sg-col-4-of-16 sg-col sg-col-4-of-20 sg-col-4-of-32']//div[@class='sg-col-inner']//div[@class='a-section a-spacing-none a-spacing-top-micro']//div[@class='a-row a-size-base a-color-secondary s-align-children-center']//div[@class='a-row s-align-children-center']//span//span[@class='a-text-bold'][contains(text(),'Today, Feb 27')]");
+
+
 
 
 
@@ -57,13 +58,22 @@ public class LandingPage extends BasePage {
 
     public void currentMonth() {
        clickOn(selectCurrentMont);
-
-
-
     }
+    public void seacrhMenu (String value){setValue(searchProduct, value);}
+
+    public void SerachButton(){clickOn(searchButton);}
+    public void productPrice() {clickOn(price);}
+   // public String getCurrentDay  (By locator){
+   //     setValue(amazonDate);
+
+   //     return null;
+  //  }
+
+    private void setValue(By amazonDate) {
+    }
+
+
 }
-
-
 
 
 

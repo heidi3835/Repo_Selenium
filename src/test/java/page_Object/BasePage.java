@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import test_scripts.DriverWrapper;
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -28,6 +29,22 @@ public class BasePage {
         return getDriver().findElement(locator).getText();
 
     }
+    public  String getCurrentDay (By locator){
+        //Create a Calendar Object
+        Calendar calendar = Calendar.getInstance(TimeZone.getDefault());
+
+        //Get Current Day as a number
+        int todayInt = calendar.get(Calendar.DAY_OF_MONTH);
+        System.out.println("Today Int: " + todayInt +"\n");
+
+        //Integer to String Conversion
+        String todayStr = Integer.toString(todayInt);
+        System.out.println("Today Str: " + todayStr + "\n");
+
+        return todayStr;
+    }
+
+
 
     public boolean isElementDisplay(By locator) {
         boolean isDisplayed;
