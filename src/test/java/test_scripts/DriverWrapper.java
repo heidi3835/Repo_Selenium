@@ -10,6 +10,7 @@ public class DriverWrapper {
     private static WebDriver driver;
     private static String url = "https://www.facebook.com/";
     private static String amazonUrl = "http://www.amazon.com/";
+    private static String hotelUrl = "http://www.hotels.com/";
 
     @BeforeClass
     public void beforeClass() {
@@ -19,7 +20,7 @@ public class DriverWrapper {
         driver = new ChromeDriver();
         //navigate to the url
         //driver.navigate().to(url);
-        driver.navigate().to(amazonUrl);
+        driver.navigate().to(hotelUrl);
 
     }
 
